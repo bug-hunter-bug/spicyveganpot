@@ -1,0 +1,180 @@
+body {
+  font-family: 'Noto Sans TC', 'Arial', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  color: #fff;
+  padding: 10px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+。logo img {
+  height: 48px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+nav ul li a:hover {
+  color: #c00;
+}
+。hero {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #111;
+}
+。slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+。slider img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.7s;
+}
+。slider img.active {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+。slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.slider-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff5;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: background 0.2s;
+}
+.slider-dots span.active {
+  background: #c00;
+}
+section {
+  padding: 48px 5% 32px 5%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+section h2 {
+  margin-top: 0;
+  color: #b11;
+  font-size: 2em;
+}
+.dishes {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dishes li {
+  flex: 1 1 240px;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0002;
+  padding: 16px;
+  text-align: center;
+}
+.dishes img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.menu-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 32px;
+  background: #c00;
+  color: #fff;
+  border-radius: 24px;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.menu-btn:hover {
+  background: #900;
+}
+.map-container {
+  margin-top: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #0002;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1em;
+}
+form button {
+  background: #b11;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button:hover {
+  background: #900;
+}
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0 10px 0;
+  margin-top: 32px;
+  font-size: 1em;
+}
+@media (max-width: 800px) {
+  .dishes {
+    flex-direction: column;
+    gap: 20px;
+  }
+  section {
+    padding: 32px 3% 24px 3%;
+  }
+  .hero, .slider img {
+    height: 180px;
+  }
+}
